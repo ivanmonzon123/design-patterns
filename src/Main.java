@@ -17,8 +17,8 @@ public class Main {
 
     //Builder example
     public static void main(String[] args) {
-        Laptop laptop = (Laptop) new ComputerDirector(new LaptopBuilder()).buildLaptop().setSize(17).build();
-        DesktopPc desktopPc = (DesktopPc) new ComputerDirector(new DesktopBuilder()).buildDesktop().setComputerCase("This is the case").build();
+        Laptop laptop = new ComputerDirector<LaptopBuilder>(new LaptopBuilder()).buildLaptop().setSize(17).build();
+        DesktopPc desktopPc = new ComputerDirector<DesktopBuilder>(new DesktopBuilder()).buildDesktop().setComputerCase("This is the case").build();
         System.out.println(laptop.toString());
         System.out.println(desktopPc.toString());
     }

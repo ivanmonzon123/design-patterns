@@ -12,13 +12,13 @@ public class DesktopBuilder extends ComputerBuilder {
         return computerCase;
     }
 
-    public ComputerBuilder setComputerCase(String computerCase) {
+    public DesktopBuilder setComputerCase(String computerCase) {
         this.computerCase = computerCase;
         return this;
     }
 
     @Override
-    public Computer build() {
+    public DesktopPc build() {
         return new DesktopPc(this);
     }
 }

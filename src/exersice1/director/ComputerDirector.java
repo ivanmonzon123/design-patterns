@@ -4,14 +4,14 @@ import exersice1.builder.ComputerBuilder;
 import exersice1.builder.DesktopBuilder;
 import exersice1.builder.LaptopBuilder;
 
-public class ComputerDirector {
-    private ComputerBuilder builder;
+public class ComputerDirector<T extends ComputerBuilder> {
+    private T builder;
 
-    public ComputerDirector(ComputerBuilder builder) {
+    public ComputerDirector(T builder) {
         this.builder = builder;
     }
 
-    public void setBuilder(ComputerBuilder builder) {
+    public void setBuilder(T builder) {
         this.builder = builder;
     }
 

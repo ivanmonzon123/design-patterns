@@ -10,7 +10,7 @@ public class LaptopBuilder extends ComputerBuilder {
         return size;
     }
 
-    public ComputerBuilder setSize(int size) {
+    public LaptopBuilder setSize(int size) {
         this.size = size;
         return this;
     }
